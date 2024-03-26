@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import LoginForm from './LogIn/LogInForm.js';
 import './App.css';
 import './Bootstrap.min.css';
 import './img/1.png';
@@ -12,6 +13,12 @@ import './img/LogoHeaderMediStock.png';
 import './img/LogoHeadMediStock.png';
 
 function App() {
+  const [showLoginForm, setShowLoginForm] = useState(false);
+
+  const handleLoginButtonClick = () => {
+    setShowLoginForm(true);
+  };
+
   return (
     <div>
       <header>
@@ -23,7 +30,7 @@ function App() {
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <ul className="navbar-nav mr-auto"></ul>
             <form className="form-inline mt-2 mt-md-0">
-              <a href="../LogIn/index.html"><button className="btn btn-outline-success my-2 my-sm-0">Iniciar Sesion</button></a>
+            <button onClick={handleLoginButtonClick} className="btn btn-outline-success my-2 my-sm-0">Iniciar Sesion</button>
             </form>
           </div>
         </nav>
