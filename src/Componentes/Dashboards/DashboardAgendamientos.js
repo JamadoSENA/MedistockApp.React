@@ -33,7 +33,7 @@ export const DashboardAgendamientos = () => {
     return (
         <>
             <div>Dashboard Agendamientos</div>
-            <Link to="/CrearAgendamiento" className='btn btn-primary'>Agregar agendamiento</Link>
+            <Link to="/CreateScheduling" className='btn btn-primary'>Agregar agendamiento</Link>
             <div className="container">
                 <table className="table">
                     <thead>
@@ -53,7 +53,6 @@ export const DashboardAgendamientos = () => {
                                 <td>{agendamiento.estado}</td>
                                 <td>{agendamiento.FKId_Paciente}</td>
                                 <td>
-                                    <Link to = {`/DetailsScheduling/${agendamiento.idAgendamiento}`} ClassName = "btn btn-outline-primary mx-2">Detalles</Link>
                                     <Link to = {`/EditScheduling/${agendamiento.idAgendamiento}`} ClassName = "btn btn-outline-primary mx-2">Actualizar</Link>
                                     <button onClick={() => deleteAgendamiento (agendamiento.idAgendamiento)} ClassName = "btn btn-danger mx-2">Eliminar</button>
                                 </td>

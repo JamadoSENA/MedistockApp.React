@@ -1,14 +1,24 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import { DashboardUsuarios } from './Componentes/Dashboards/DashboardUsuarios.js';
-import { CreateUser } from './Componentes/Create/CreateUser.js';
 import Header from './Componentes/Header.js';
-import { EditUser } from './Componentes/Edit/EditUser.js';
+import { DashboardUsuarios } from './Componentes/Dashboards/DashboardUsuarios.js';
 import { DashboardProveedores } from './Componentes/Dashboards/DashboardProveedores.js';
 import { DashboardProductos } from './Componentes/Dashboards/DashboardProductos.js';
 import { DashboardPacientes } from './Componentes/Dashboards/DashboardPacientes.js';
 import { DashboardCitas } from './Componentes/Dashboards/DashboardCitas.js';
 import { DashboardAgendamientos } from './Componentes/Dashboards/DashboardAgendamientos.js';
+import { CreateDate } from './Componentes/Create/CreateDate.js';
+import { CreatePacient } from './Componentes/Create/CreatePacient.js';
+import { CreateProduct } from './Componentes/Create/CreateProduct.js';
+import { CreateScheduling } from './Componentes/Create/CreateScheduling.js';
+import { CreateSupplier } from './Componentes/Create/CreateSupplier.js';
+import { CreateUser } from './Componentes/Create/CreateUser.js';
+import { EditUser } from './Componentes/Edit/EditUser.js';
+import { EditPacient } from './Componentes/Edit/EditPacient.js';
+import { EditScheduling } from './Componentes/Edit/EditScheduling.js';
+import { EditProduct } from './Componentes/Edit/EditProduct.js';
+import { EditSupplier } from './Componentes/Edit/EditSupplier.js';
+
 
 function App() {
 
@@ -24,7 +34,16 @@ function App() {
           <Route path="/ListDate" element = {<DashboardCitas />}/>
           <Route path="/ListScheduling" element = {<DashboardAgendamientos />}/>
           <Route path="/CreateUser" element = {<CreateUser />}/>
-          <Route path="/EditUser/:identificacion" element = {<EditUser />}/>
+          <Route path="/CreateDate" element = {<CreateDate />}/>
+          <Route path="/CreatePacient" element = {<CreatePacient />}/>
+          <Route path="/CreateProduct" element = {<CreateProduct />}/>
+          <Route path="/CreateScheduling" element = {<CreateScheduling />}/>
+          <Route path="/CreateSupplier" element = {<CreateSupplier />}/>
+          <Route path="/EditUser/:idUsuario" element = {<EditUser />}/>
+          <Route path="/EditPacient/:idPaciente" element = {<EditPacient />}/>
+          <Route path="/EditProduct/:idProducto" element = {<EditProduct />}/>
+          <Route path="/EditScheduling/:idAgendamiento" element = {<EditScheduling />}/>
+          <Route path="/EditSupplier/:idProveedor" element = {<EditSupplier />}/>
         </Routes>   
     </div>    
 

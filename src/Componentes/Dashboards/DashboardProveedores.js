@@ -33,7 +33,7 @@ export const DashboardProveedores = () => {
     return (
         <>
             <div>Dashboard Proveedores</div>
-            <Link to="/CrearProveedor" className='btn btn-primary'>Agregar proveedor</Link>
+            <Link to="/CreateSupplier" className='btn btn-primary'>Agregar proveedor</Link>
             <div className="container">
                 <table className="table">
                     <thead>
@@ -55,7 +55,6 @@ export const DashboardProveedores = () => {
                                 <td>{proveedor.telefono}</td>
                                 <td>{proveedor.correo}</td>
                                 <td>
-                                    <Link to = {`/DetailsSupplier/${proveedor.idProveedor}`} ClassName = "btn btn-outline-primary mx-2">Detalles</Link>
                                     <Link to = {`/EditSupplier/${proveedor.idProveedor}`} ClassName = "btn btn-outline-primary mx-2">Actualizar</Link>
                                     <button onClick={() => deleteProveedor (proveedor.idProveedor)} ClassName = "btn btn-danger mx-2">Eliminar</button>
                                 </td>

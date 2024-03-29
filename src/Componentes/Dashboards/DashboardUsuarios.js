@@ -55,7 +55,6 @@ export const DashboardUsuarios = () => {
                                 <td>{usuario.correo}</td>
                                 <td>{usuario.direccion}</td>
                                 <td>
-                                    <Link to = {`/DetailsUser/${usuario.idUsuario}`} ClassName = "btn btn-outline-primary mx-2">Detalles</Link>
                                     <Link to = {`/EditUser/${usuario.idUsuario}`} ClassName = "btn btn-outline-primary mx-2">Actualizar</Link>
                                     <button onClick={() => deleteUsuario (usuario.idUsuario)} ClassName = "btn btn-danger mx-2">Eliminar</button>
                                 </td>

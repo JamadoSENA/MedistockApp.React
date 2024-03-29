@@ -66,6 +66,10 @@ export const CreateProduct = () => {
               <input className="form-control" onChange = {(e) => onInputChange(e)} value = {cantidad} type={"number"} name="cantidad" placeholder="Ingrese la cantidad" required />
             </div>
             <br />
+            <div className="estado">
+              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {estado} type={"text"} name="estado" placeholder="Ingrese el estado" required />
+            </div>
+            <br />
             <div className="FkId_Proveedor">
               <input className="form-control" onChange = {(e) => onInputChange(e)} value = {FkIdProveedor} type={"number"} name="FkId_Proveedor" placeholder="Ingrese el id del proveedor" required />
             </div>

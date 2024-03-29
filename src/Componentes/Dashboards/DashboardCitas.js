@@ -33,7 +33,7 @@ export const DashboardCitas = () => {
     return (
         <>
             <div>Dashboard Citas</div>
-            <Link to="/CrearCita" className='btn btn-primary'>Agregar cita</Link>
+            <Link to="/CreateDate" className='btn btn-primary'>Agregar cita</Link>
             <div className="container">
                 <table className="table">
                     <thead>
@@ -55,7 +55,6 @@ export const DashboardCitas = () => {
                                 <td>{cita.recomendaciones}</td>
                                 <td>{cita.FkId_Medico}</td>
                                 <td>
-                                    <Link to = {`/DetailsDate/${cita.idCita}`} ClassName = "btn btn-outline-primary mx-2">Detalles</Link>
                                     <button onClick={() => deleteCita (cita.idCita)} ClassName = "btn btn-danger mx-2">Eliminar</button>
                                 </td>
                             </tr>

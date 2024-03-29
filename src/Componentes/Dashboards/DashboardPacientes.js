@@ -33,7 +33,7 @@ export const DashboardPacientes = () => {
     return (
         <>
             <div>Dashboard Pacientes</div>
-            <Link to="/CrearPaciente" className='btn btn-primary'>Agregar paciente</Link>
+            <Link to="/CreatePacient" className='btn btn-primary'>Agregar paciente</Link>
             <div className="container">
                 <table className="table">
                     <thead>
@@ -55,7 +55,6 @@ export const DashboardPacientes = () => {
                                 <td>{paciente.telefono}</td>
                                 <td>{paciente.correo}</td>
                                 <td>
-                                    <Link to = {`/DetailsPacient/${paciente.idPaciente}`} ClassName = "btn btn-outline-primary mx-2">Detalles</Link>
                                     <Link to = {`/EditPacient/${paciente.idPaciente}`} ClassName = "btn btn-outline-primary mx-2">Actualizar</Link>
                                     <button onClick={() => deletePaciente (paciente.idPaciente)} ClassName = "btn btn-danger mx-2">Eliminar</button>
                                 </td>

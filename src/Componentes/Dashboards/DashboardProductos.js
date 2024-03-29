@@ -33,7 +33,7 @@ export const DashboardProductos = () => {
     return (
         <>
             <div>Dashboard Productos</div>
-            <Link to="/CrearProducto" className='btn btn-primary'>Agregar producto</Link>
+            <Link to="/CreateProduct" className='btn btn-primary'>Agregar producto</Link>
             <div className="container">
                 <table className="table">
                     <thead>
@@ -55,7 +55,6 @@ export const DashboardProductos = () => {
                                 <td>{producto.descripcion}</td>
                                 <td>{producto.FkId_Proveedor}</td>
                                 <td>
-                                    <Link to = {`/DetailsProduct/${producto.idProducto}`} ClassName = "btn btn-outline-primary mx-2">Detalles</Link>
                                     <Link to = {`/EditProduct/${producto.idProducto}`} ClassName = "btn btn-outline-primary mx-2">Actualizar</Link>
                                     <button onClick={() => deleteProducto (producto.idProducto)} ClassName = "btn btn-danger mx-2">Eliminar</button>
                                 </td>
