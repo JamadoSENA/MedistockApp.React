@@ -33,13 +33,12 @@ export const DashboardUsuarios = () => {
     return (
         <>
             <div>Dashboard Usuarios</div>
-
             <Link to="/CrearUsuario" className='btn btn-primary'>Agregar usuario</Link>
-
             <div className="container">
                 <table className="table">
                     <thead>
                         <tr>
+                            <th scope="col">Documento</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Apellido</th>
                             <th scope="col">Email</th>
@@ -50,14 +49,15 @@ export const DashboardUsuarios = () => {
                     <tbody>
                         {listUsuarios.map((usuario, index) => (
                             <tr key={index}>
+                                <td>{usuario.documento}</td>
                                 <td>{usuario.nombre}</td>
                                 <td>{usuario.apellido}</td>
-                                <td>{usuario.email}</td>
+                                <td>{usuario.correo}</td>
                                 <td>{usuario.direccion}</td>
                                 <td>
-                                    <button ClassName = "btn btn-primary mx-2">View</button>
-                                    <Link to = {`/EditUser/${usuario.identificacion}`} ClassName = "btn btn-outline-primary mx-2">Edit</Link>
-                                    <button onClick={() => deleteUsuario (usuario.identificacion)} ClassName = "btn btn-danger mx-2">Delete</button>
+                                    <button ClassName = "btn btn-primary mx-2">Detalles</button>
+                                    <Link to = {`/EditUser/${usuario.identificacion}`} ClassName = "btn btn-outline-primary mx-2">Actualizar</Link>
+                                    <button onClick={() => deleteUsuario (usuario.identificacion)} ClassName = "btn btn-danger mx-2">Eliminar</button>
                                 </td>
                             </tr>
                         ))}

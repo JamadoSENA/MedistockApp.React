@@ -8,21 +8,14 @@ import { EditUser } from './Componentes/Edit/EditUser.js';
 function App() {
 
   return (
-
     <>
-
-<Header />
-
+    <Header />
     <div className="App">
-
          <Routes>
-
           <Route path="/CrearUsuario" element = {<CrearUsuario />}/>
           <Route path="/ListUser" element = {<DashboardUsuarios />}/>
           <Route path="/EditUser/:identificacion" element = {<EditUser />}/>
-
-          </Routes>   
- 
+        </Routes>   
     </div>    
 
     </>
