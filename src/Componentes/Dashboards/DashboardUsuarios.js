@@ -24,8 +24,8 @@ export const DashboardUsuarios = () => {
 
 
     //DELETE USERS
-    const deleteUsuario = async (identificacion) => {
-        await axios.delete(`http://localhost:8086/api/usuario/delete/${identificacion}`)
+    const deleteUsuario = async (idUsuario) => {
+        await axios.delete(`http://localhost:8086/api/usuario/delete/${idUsuario}`)
         getUsuarios()
     }
     //DELETE USERS
@@ -33,7 +33,7 @@ export const DashboardUsuarios = () => {
     return (
         <>
             <div>Dashboard Usuarios</div>
-            <Link to="/CrearUsuario" className='btn btn-primary'>Agregar usuario</Link>
+            <Link to="/CreateUser" className='btn btn-primary'>Agregar usuario</Link>
             <div className="container">
                 <table className="table">
                     <thead>
@@ -55,9 +55,9 @@ export const DashboardUsuarios = () => {
                                 <td>{usuario.correo}</td>
                                 <td>{usuario.direccion}</td>
                                 <td>
-                                    <Link to = {`/DetailsUser/${usuario.identificacion}`} ClassName = "btn btn-outline-primary mx-2">Detalles</Link>
-                                    <Link to = {`/EditUser/${usuario.identificacion}`} ClassName = "btn btn-outline-primary mx-2">Actualizar</Link>
-                                    <button onClick={() => deleteUsuario (usuario.identificacion)} ClassName = "btn btn-danger mx-2">Eliminar</button>
+                                    <Link to = {`/DetailsUser/${usuario.idUsuario}`} ClassName = "btn btn-outline-primary mx-2">Detalles</Link>
+                                    <Link to = {`/EditUser/${usuario.idUsuario}`} ClassName = "btn btn-outline-primary mx-2">Actualizar</Link>
+                                    <button onClick={() => deleteUsuario (usuario.idUsuario)} ClassName = "btn btn-danger mx-2">Eliminar</button>
                                 </td>
                             </tr>
                         ))}

@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import { DashboardUsuarios } from './Componentes/Dashboards/DashboardUsuarios.js';
-import { CrearUsuario } from './Componentes/Create/CreateUser.js';
+import { CreateUser } from './Componentes/Create/CreateUser.js';
 import Header from './Componentes/Header.js';
 import { EditUser } from './Componentes/Edit/EditUser.js';
 import { DashboardProveedores } from './Componentes/Dashboards/DashboardProveedores.js';
@@ -23,7 +23,7 @@ function App() {
           <Route path="/ListPacient" element = {<DashboardPacientes />}/>
           <Route path="/ListDate" element = {<DashboardCitas />}/>
           <Route path="/ListScheduling" element = {<DashboardAgendamientos />}/>
-          <Route path="/CrearUsuario" element = {<CrearUsuario />}/>
+          <Route path="/CreateUser" element = {<CreateUser />}/>
           <Route path="/EditUser/:identificacion" element = {<EditUser />}/>
         </Routes>   
     </div>    
