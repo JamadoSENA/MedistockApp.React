@@ -20,7 +20,7 @@ export const EditProduct = () => {
 
     const onInputChange = (e) => {
        
-        setPaciente({...Producto, [e.target.name]:e.target.value})
+        setProducto({...Producto, [e.target.name]:e.target.value})
 
     };
 

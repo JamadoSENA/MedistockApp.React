@@ -19,7 +19,6 @@ import { EditScheduling } from './Componentes/Edit/EditScheduling.js';
 import { EditProduct } from './Componentes/Edit/EditProduct.js';
 import { EditSupplier } from './Componentes/Edit/EditSupplier.js';
 
-
 function App() {
 
   return (

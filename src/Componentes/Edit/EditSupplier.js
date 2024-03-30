@@ -20,7 +20,7 @@ export const EditSupplier = () => {
 
     })
 
-    const{nit, nombre, departamento, municipio, direccion, telefono, correo} = Proveedor
+    const{nit, nombre, departamento, municipio, direccion, telefono, correo} = proveedor
 
     const onInputChange = (e) => {
        
@@ -40,7 +40,7 @@ export const EditSupplier = () => {
       
       const loadProveedor = async () => {
         const result = await axios.get(`http://localhost:8086/api/proveedor/list/${idProveedor}`);
-        setUsuario(result.data.data);
+        setProveedor(result.data.data);
       };
       loadProveedor();
     }, [idProveedor]);
