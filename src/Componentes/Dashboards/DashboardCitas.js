@@ -31,37 +31,39 @@ export const DashboardCitas = () => {
     //DELETE DATES
 
     return (
-        <>
-            <div>Dashboard Citas</div>
-            <Link to="/CreateDate" className='btn btn-primary'>Agregar cita</Link>
-            <div className="container">
-                <table className="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Fecha</th>
-                            <th scope="col">Diagnostico</th>
-                            <th scope="col">Tratamiento</th>
-                            <th scope="col">Recomendaciones</th>
-                            <th scope="col">Medico</th>
-                            <th scope="col">Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {ListCitas.map((cita, index) => (
-                            <tr key={index}>
-                                <td>{cita.fecha}</td>
-                                <td>{cita.diagnostico}</td>
-                                <td>{cita.tratamiento}</td>
-                                <td>{cita.recomendaciones}</td>
-                                <td>{cita.FkId_Medico}</td>
-                                <td>
-                                    <button onClick={() => deleteCita (cita.idCita)} ClassName = "btn btn-danger mx-2">Eliminar</button>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
-        </>
+        <div>
+      <div className="container">
+        <h1 style={{ marginBottom: '20px' }}>Dashboard Citas</h1>
+        <div className="d-flex justify-content-between" style={{ marginBottom: '20px' }}>
+          <Link to="/CreateDate" className='btn btn-primary'>Agregar Cita</Link>
+        </div>
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col">Fecha</th>
+              <th scope="col">Diagnóstico</th>
+              <th scope="col">Tratamiento</th>
+              <th scope="col">Recomendaciones</th>
+              <th scope="col">Médico</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {ListCitas.map((cita, idCita) => (
+              <tr key={idCita}>
+                <td>{cita.fecha}</td>
+                <td>{cita.diagnostico}</td>
+                <td>{cita.tratamiento}</td>
+                <td>{cita.recomendaciones}</td>
+                <td>{cita.FkId_Medico}</td>
+                <td>
+                  <button onClick={() => deleteCita(cita.idCita)} className="btn btn-danger mx-2">Eliminar</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
     )
 }

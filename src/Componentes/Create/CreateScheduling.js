@@ -34,44 +34,40 @@ export const CreateScheduling = () => {
   return (
    
     <div className="container">
-
-    <div className="row">
-
-      <div className="col-12">
-
-        <div className="formulario-registro">
-
-          <h1>Crear agendamiento</h1>
-          <form onSubmit = {(e) => onSubmit(e)}>
-            <div className="fecha">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {fecha} type={"date"} name="fecha" placeholder="Ingrese la fecha" required />
-            </div>
-            <br />
-            <div className="motivo">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {motivo} type={"text"} name="motivo" placeholder="Ingrese el motivo" required />
-            </div>
-            <br />
-            <div className="estado">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {estado} type={"text"} name="estado" placeholder="Ingrese el estado" required />
-            </div>
-            <br />
-            <div className="FkId_Paciente">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {FkId_Paciente} type={"number"} name="FkId_Paciente" placeholder="Ingrese el id del paciente" required />
-            </div>
-            <br />
-            <div className="form-check mb-3">
-              <button type="submit">Registrar agendamiento</button>
-            </div>
-          </form>
-          <div id="mensajeError" className="mensaje-error"></div>
-
+      <div className="row">
+        <div className="col-12">
+          <div className="formulario-registro">
+            <h2>Crear agendamiento</h2>
+            <form onSubmit={onSubmit}>
+              <div className="form-group">
+                <label>Fecha</label>
+                <input className="form-control" onChange={onInputChange} value={fecha} type="date" name="fecha" placeholder="Ingrese la fecha" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label>Motivo</label>
+                <input className="form-control" onChange={onInputChange} value={motivo} type="text" name="motivo" placeholder="Ingrese el motivo" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label>Estado</label>
+                <input className="form-control" onChange={onInputChange} value={estado} type="text" name="estado" placeholder="Ingrese el estado" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label>ID del paciente</label>
+                <input className="form-control" onChange={onInputChange} value={FkId_Paciente} type="number" name="FkId_Paciente" placeholder="Ingrese el ID del paciente" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <button type="submit" className="btn btn-primary">Registrar agendamiento</button>
+              </div>
+            </form>
+            <div id="mensajeError" className="mensaje-error"></div>
+          </div>
         </div>
-
       </div>
-
     </div>
-
-  </div>
 
   )
 }

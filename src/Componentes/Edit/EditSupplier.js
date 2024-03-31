@@ -56,38 +56,45 @@ export const EditSupplier = () => {
 
         <div className="formulario-registro">
 
-          <h1>Editar proveedor</h1>
-          <form onSubmit = {(e) => onSubmit(e)}>
-          <div className="nit">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {nit} type={"number"} name="nit" placeholder="Ingrese el nit" required />
+          <h2>Editar proveedor</h2>
+          <form onSubmit={(e) => onSubmit(e)}>
+            <div className="form-group">
+              <label htmlFor="nit">NIT</label>
+              <input className="form-control" onChange={(e) => onInputChange(e)} value={nit} type={"number"} name="nit" id="nit" placeholder="Ingrese el NIT" required />
             </div>
             <br />
-            <div className="nombre">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {nombre} type={"text"} name="nombre" placeholder="Ingrese el nombre" required />
+            <div className="form-group">
+              <label htmlFor="nombre">Nombre</label>
+              <input className="form-control" onChange={(e) => onInputChange(e)} value={nombre} type={"text"} name="nombre" id="nombre" placeholder="Ingrese el nombre" required />
             </div>
             <br />
-            <div className="departamento">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {departamento} type={"text"} name="departamento" placeholder="Ingrese el departamento" required />
+            <div className="form-group">
+              <label htmlFor="departamento">Departamento</label>
+              <input className="form-control" onChange={(e) => onInputChange(e)} value={departamento} type={"text"} name="departamento" id="departamento" placeholder="Ingrese el departamento" required />
             </div>
             <br />
-            <div className="municipio">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {municipio} type={"text"} name="municipio" placeholder="Ingrese el municipio" required />
+            <div className="form-group">
+              <label htmlFor="municipio">Municipio</label>
+              <input className="form-control" onChange={(e) => onInputChange(e)} value={municipio} type={"text"} name="municipio" id="municipio" placeholder="Ingrese el municipio" required />
             </div>
             <br />
-            <div className="direccion">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {direccion} type={"text"} name="direccion" placeholder="Ingrese la dirección" required />
+            <div className="form-group">
+              <label htmlFor="direccion">Dirección</label>
+              <input className="form-control" onChange={(e) => onInputChange(e)} value={direccion} type={"text"} name="direccion" id="direccion" placeholder="Ingrese la dirección" required />
             </div>
             <br />
-            <div className="telefono">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {telefono} type={"number"} name="telefono" placeholder="Ingrese el numero telefonico" required />
+            <div className="form-group">
+              <label htmlFor="telefono">Teléfono</label>
+              <input className="form-control" onChange={(e) => onInputChange(e)} value={telefono} type={"number"} name="telefono" id="telefono" placeholder="Ingrese el número telefónico" required />
             </div>
             <br />
-            <div className="correo">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {correo} type={"email"} name="correo" placeholder="Ingrese el correo electronico" required />
+            <div className="form-group">
+              <label htmlFor="correo">Correo electrónico</label>
+              <input className="form-control" onChange={(e) => onInputChange(e)} value={correo} type={"email"} name="correo" id="correo" placeholder="Ingrese el correo electrónico" required />
             </div>
             <br />
-            <div className="form-check mb-3">
-              <button type="submit">Editar proveedor</button>
+            <div className="form-group">
+              <button type="submit" className="btn btn-primary">Editar proveedor</button>
             </div>
           </form>
           <div id="mensajeError" className="mensaje-error"></div>

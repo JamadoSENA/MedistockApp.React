@@ -10,6 +10,7 @@ export const CreatePacient = () => {
 
         documento:"",
         tipoDocumento:"",
+        genero:"",
         nombre: "",
         apellido: "",
         fechaNacimiento: "",
@@ -23,7 +24,7 @@ export const CreatePacient = () => {
 
     })
 
-    const{documento, tipoDocumento, nombre, apellido, fechaNacimiento, edad, departamento, municipio, direccion, profesion, telefono, correo} = Paciente
+    const{documento, tipoDocumento, genero, nombre, apellido, fechaNacimiento, edad, departamento, municipio, direccion, profesion, telefono, correo} = Paciente
 
     const onInputChange = (e) => {
        
@@ -42,76 +43,86 @@ export const CreatePacient = () => {
   return (
    
     <div className="container">
-
     <div className="row">
-
       <div className="col-12">
-
         <div className="formulario-registro">
-
-          <h1>Crear paciente</h1>
-          <form onSubmit = {(e) => onSubmit(e)}>
-            <div className="documento">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {documento} type={"number"} name="documento" placeholder="Ingrese el numero de documento" required />
+          <h2>Crear paciente</h2>
+          <form onSubmit={onSubmit}>
+            <div className="form-group">
+            <label>Documento</label>
+              <input className="form-control" onChange={onInputChange} value={documento} type="number" name="documento" placeholder="Número de documento" required />
             </div>
             <br />
-            <div className="tipoDocumento">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {tipoDocumento} type={"text"} name="tipoDocumento" placeholder="Ingrese el tipo de documento" required />
+            <div className="form-group">
+            <label>Tipo documento</label>
+              <input className="form-control" onChange={onInputChange} value={tipoDocumento} type="text" name="tipoDocumento" placeholder="Tipo de documento" required />
             </div>
             <br />
-            <div className="nombre">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {nombre} type={"text"} name="nombre" placeholder="Ingrese el nombre" required />
+            <div className="form-group">
+            <label>Genero</label>
+              <input className="form-control" onChange={onInputChange} value={genero} type="text" name="genero" placeholder="Género" required />
             </div>
             <br />
-            <div className="apellido">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {apellido} type={"text"} name="apellido" placeholder="Ingrese el apellido" required />
+            <div className="form-group">
+            <label>Nombre</label>
+              <input className="form-control" onChange={onInputChange} value={nombre} type="text" name="nombre" placeholder="Nombre" required />
             </div>
             <br />
-            <div className="fechaNacimiento">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {fechaNacimiento} type={"date"} name="fechaNacimiento" placeholder="Ingrese la fecha de nacimiento" required />
+            <div className="form-group">
+            <label>Apellido</label>
+              <input className="form-control" onChange={onInputChange} value={apellido} type="text" name="apellido" placeholder="Apellido" required />
             </div>
             <br />
-            <div className="edad">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {edad} type={"number"} name="edad" placeholder="Ingrese la edad" required />
+            <div className="form-group">
+            <label>Fecha Nacimiento</label>
+              <input className="form-control" onChange={onInputChange} value={fechaNacimiento} type="date" name="fechaNacimiento" placeholder="Fecha de nacimiento" required />
             </div>
             <br />
-            <div className="departamento">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {departamento} type={"text"} name="departamento" placeholder="Ingrese el departamento" required />
+            <div className="form-group">
+            <label>Edad</label>
+              <input className="form-control" onChange={onInputChange} value={edad} type="number" name="edad" placeholder="Edad" required />
             </div>
             <br />
-            <div className="municipio">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {municipio} type={"text"} name="municipio" placeholder="Ingrese el municipio" required />
+            <div className="form-group">
+            <label>Departamento</label>
+              <input className="form-control" onChange={onInputChange} value={departamento} type="text" name="departamento" placeholder="Departamento" required />
             </div>
             <br />
-            <div className="direccion">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {direccion} type={"text"} name="direccion" placeholder="Ingrese la dirección" required />
+            <div className="form-group">
+            <label>Municipio</label>
+              <input className="form-control" onChange={onInputChange} value={municipio} type="text" name="municipio" placeholder="Municipio" required />
             </div>
             <br />
-            <div className="profesion">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {profesion} type={"text"} name="profesion" placeholder="Ingrese la profesion" required />
+            <div className="form-group">
+            <label>Direccion</label>
+              <input className="form-control" onChange={onInputChange} value={direccion} type="text" name="direccion" placeholder="Dirección" required />
             </div>
             <br />
-            <div className="telefono">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {telefono} type={"number"} name="telefono" placeholder="Ingrese el numero telefonico" required />
+            <div className="form-group">
+            <label>Profesion</label>
+              <input className="form-control" onChange={onInputChange} value={profesion} type="text" name="profesion" placeholder="Profesión" required />
             </div>
             <br />
-            <div className="correo">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {correo} type={"email"} name="correo" placeholder="Ingrese el correo electronico" required />
+            <div className="form-group">
+            <label>Telefono</label>
+              <input className="form-control" onChange={onInputChange} value={telefono} type="number" name="telefono" placeholder="Teléfono" required />
             </div>
             <br />
-            <div className="form-check mb-3">
-              <button type="submit">Registrar paciente</button>
+            <div className="form-group">
+            <label>Correo</label>
+              <input className="form-control" onChange={onInputChange} value={correo} type="email" name="correo" placeholder="Correo electrónico" required />
+            </div>
+            <br />
+            <div className="form-group">
+              <button type="submit" className="btn btn-primary">Registrar paciente</button>
             </div>
           </form>
           <div id="mensajeError" className="mensaje-error"></div>
-
         </div>
-
       </div>
-
     </div>
-
   </div>
+
 
   )
 }

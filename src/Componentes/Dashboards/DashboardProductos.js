@@ -31,38 +31,40 @@ export const DashboardProductos = () => {
     //DELETE PRODUCTS
 
     return (
-        <>
-            <div>Dashboard Productos</div>
-            <Link to="/CreateProduct" className='btn btn-primary'>Agregar producto</Link>
-            <div className="container">
-                <table className="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Cantidad</th>
-                            <th scope="col">Estado</th>
-                            <th scope="col">Descripcion</th>
-                            <th scope="col">Proveedor</th>
-                            <th scope="col">Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {ListProductos.map((producto, index) => (
-                            <tr key={index}>
-                                <td>{producto.nombre}</td>
-                                <td>{producto.cantidad}</td>
-                                <td>{producto.estado}</td>
-                                <td>{producto.descripcion}</td>
-                                <td>{producto.FkId_Proveedor}</td>
-                                <td>
-                                    <Link to = {`/EditProduct/${producto.idProducto}`} ClassName = "btn btn-outline-primary mx-2">Actualizar</Link>
-                                    <button onClick={() => deleteProducto (producto.idProducto)} ClassName = "btn btn-danger mx-2">Eliminar</button>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
-        </>
+        <div>
+      <div className="container">
+        <h1 style={{ marginBottom: '20px' }}>Dashboard Productos</h1>
+        <div className="d-flex justify-content-between" style={{ marginBottom: '20px' }}>
+          <Link to="/CreateProduct" className='btn btn-primary'>Agregar Producto</Link>
+        </div>
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col">Nombre</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Estado</th>
+              <th scope="col">Descripción</th>
+              <th scope="col">Proveedor</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {ListProductos.map((producto, idProducto) => (
+              <tr key={idProducto}>
+                <td>{producto.nombre}</td>
+                <td>{producto.cantidad}</td>
+                <td>{producto.estado}</td>
+                <td>{producto.descripcion}</td>
+                <td>{producto.FkId_Proveedor}</td>
+                <td>
+                  <Link to={`/EditProduct/${producto.idProducto}`} className="btn btn-outline-primary mx-2">Actualizar</Link>
+                  <button onClick={() => deleteProducto(producto.idProducto)} className="btn btn-danger mx-2">Eliminar</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
     )
 }

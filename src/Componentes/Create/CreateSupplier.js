@@ -37,56 +37,55 @@ export const CreateSupplier = () => {
   return (
    
     <div className="container">
-
-    <div className="row">
-
-      <div className="col-12">
-
-        <div className="formulario-registro">
-
-          <h1>Crear proveedor</h1>
-          <form onSubmit = {(e) => onSubmit(e)}>
-            <div className="nit">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {nit} type={"number"} name="nit" placeholder="Ingrese el nit" required />
-            </div>
-            <br />
-            <div className="nombre">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {nombre} type={"text"} name="nombre" placeholder="Ingrese el nombre" required />
-            </div>
-            <br />
-            <div className="departamento">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {departamento} type={"text"} name="departamento" placeholder="Ingrese el departamento" required />
-            </div>
-            <br />
-            <div className="municipio">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {municipio} type={"text"} name="municipio" placeholder="Ingrese el municipio" required />
-            </div>
-            <br />
-            <div className="direccion">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {direccion} type={"text"} name="direccion" placeholder="Ingrese la dirección" required />
-            </div>
-            <br />
-            <div className="telefono">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {telefono} type={"number"} name="telefono" placeholder="Ingrese el numero telefonico" required />
-            </div>
-            <br />
-            <div className="correo">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {correo} type={"email"} name="correo" placeholder="Ingrese el correo electronico" required />
-            </div>
-            <br />
-            <div className="form-check mb-3">
-              <button type="submit">Registrar proveedor</button>
-            </div>
-          </form>
-          <div id="mensajeError" className="mensaje-error"></div>
-
+      <div className="row">
+        <div className="col-12">
+          <div className="formulario-registro">
+            <h2>Crear proveedor</h2>
+            <form onSubmit={onSubmit}>
+              <div className="form-group">
+                <label>NIT</label>
+                <input className="form-control" onChange={onInputChange} value={nit} type="number" name="nit" placeholder="Ingrese el NIT" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label>Nombre</label>
+                <input className="form-control" onChange={onInputChange} value={nombre} type="text" name="nombre" placeholder="Ingrese el nombre" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label>Departamento</label>
+                <input className="form-control" onChange={onInputChange} value={departamento} type="text" name="departamento" placeholder="Ingrese el departamento" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label>Municipio</label>
+                <input className="form-control" onChange={onInputChange} value={municipio} type="text" name="municipio" placeholder="Ingrese el municipio" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label>Dirección</label>
+                <input className="form-control" onChange={onInputChange} value={direccion} type="text" name="direccion" placeholder="Ingrese la dirección" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label>Teléfono</label>
+                <input className="form-control" onChange={onInputChange} value={telefono} type="number" name="telefono" placeholder="Ingrese el número telefónico" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label>Correo electrónico</label>
+                <input className="form-control" onChange={onInputChange} value={correo} type="email" name="correo" placeholder="Ingrese el correo electrónico" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <button type="submit" className="btn btn-primary">Registrar proveedor</button>
+              </div>
+            </form>
+            <div id="mensajeError" className="mensaje-error"></div>
+          </div>
         </div>
-
       </div>
-
     </div>
-
-  </div>
 
   )
 }
