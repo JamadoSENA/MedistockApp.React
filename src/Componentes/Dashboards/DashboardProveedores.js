@@ -55,7 +55,7 @@ export const DashboardProveedores = () => {
                                 <td>{proveedor.telefono}</td>
                                 <td>{proveedor.correo}</td>
                                 <td>
-                                    <Link to = {`/EditSupplier/${proveedor.idProveedor}`} ClassName = "btn btn-outline-primary mx-2">Actualizar</Link>
+                                    <Link to = {`/EditSupplier/${proveedor.id}`} ClassName = "btn btn-outline-primary mx-2">Actualizar</Link>
                                     <button onClick={() => deleteProveedor (proveedor.idProveedor)} ClassName = "btn btn-danger mx-2">Eliminar</button>
                                 </td>
                             </tr>

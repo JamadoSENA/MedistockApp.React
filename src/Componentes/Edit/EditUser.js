@@ -6,7 +6,7 @@ export const EditUser = () => {
 
     let navigate = useNavigate()
 
-    const {idUsuario} = useParams()
+    const {id} = useParams()
 
     const [usuario, setUsuario] = useState ({
 
@@ -20,12 +20,11 @@ export const EditUser = () => {
       profesion:"",
       telefono: "",
       correo: "",
-      contrasenia: "",
-      FkId_Rol:""
+      contrasenia: ""
 
     })
 
-    const{documento, nombre, apellido, fechaNacimiento, departamento, municipio, direccion, profesion, telefono, correo, contrasenia, FkId_Rol} = usuario
+    const{documento, nombre, apellido, fechaNacimiento, departamento, municipio, direccion, profesion, telefono, correo, contrasenia} = usuario
 
     const onInputChange = (e) => {
        
@@ -36,7 +35,7 @@ export const EditUser = () => {
     const onSubmit = async (e) => {
 
         e.preventDefault();
-        axios.put(`http://localhost:8086/api/usuario/update/${idUsuario}`,usuario)
+        axios.put(`http://localhost:8086/api/usuario/update/${id}`,usuario)
         navigate("DashboardUsuarios.js");
 
     };
@@ -44,11 +43,11 @@ export const EditUser = () => {
     useEffect(() => {
       
       const loadUsuario = async () => {
-        const result = await axios.get(`http://localhost:8086/api/usuario/list/${idUsuario}`);
+        const result = await axios.get(`http://localhost:8086/api/usuario/list/${id}`);
         setUsuario(result.data.data);
       };
       loadUsuario();
-    }, [idUsuario]);
+    }, [id]);
 
 
   return (
@@ -107,9 +106,7 @@ export const EditUser = () => {
               <input className="form-control" onChange = {(e) => onInputChange(e)} value = {contrasenia} type={"password"} name="contrasenia" placeholder="Ingrese la contraseña" required />
             </div>
             <br />
-            <div className="FkId_Rol">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {FkId_Rol} type={"number"} name="FkId_Rol" placeholder="Ingrese el rol del usuario" />
-            </div>
+            
             <br />
             <div className="form-check mb-3">
               <button type="submit">Registrarse</button>

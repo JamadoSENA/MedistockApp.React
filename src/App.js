@@ -38,11 +38,11 @@ function App() {
           <Route path="/CreateProduct" element = {<CreateProduct />}/>
           <Route path="/CreateScheduling" element = {<CreateScheduling />}/>
           <Route path="/CreateSupplier" element = {<CreateSupplier />}/>
-          <Route path="/EditUser/:idUsuario" element = {<EditUser />}/>
-          <Route path="/EditPacient/:idPaciente" element = {<EditPacient />}/>
-          <Route path="/EditProduct/:idProducto" element = {<EditProduct />}/>
-          <Route path="/EditScheduling/:idAgendamiento" element = {<EditScheduling />}/>
-          <Route path="/EditSupplier/:idProveedor" element = {<EditSupplier />}/>
+          <Route path="/EditUser/:id" element = {<EditUser />}/>
+          <Route path="/EditPacient/:id" element = {<EditPacient />}/>
+          <Route path="/EditProduct/:id" element = {<EditProduct />}/>
+          <Route path="/EditScheduling/:id" element = {<EditScheduling />}/>
+          <Route path="/EditSupplier/:id" element = {<EditSupplier />}/>
         </Routes>   
     </div>    
 
