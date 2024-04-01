@@ -31,6 +31,7 @@ export const DashboardProveedores = () => {
     //DELETE SUPPLIERS
 
     return (
+<<<<<<< HEAD
         <>
             <div>Dashboard Proveedores</div>
             <Link to="/CreateSupplier" className='btn btn-primary'>Agregar proveedor</Link>
@@ -64,5 +65,42 @@ export const DashboardProveedores = () => {
                 </table>
             </div>
         </>
+=======
+        <div>
+      <div className="container">
+        <h1 style={{ marginBottom: '20px' }}>Dashboard Proveedores</h1>
+        <div className="d-flex justify-content-between" style={{ marginBottom: '20px' }}>
+          <Link to="/CreateSupplier" className='btn btn-primary'>Agregar Proveedor</Link>
+        </div>
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col">NIT</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Departamento</th>
+              <th scope="col">Teléfono</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {listProveedores.map((proveedor, idProveedor) => (
+              <tr key={idProveedor}>
+                <td>{proveedor.nit}</td>
+                <td>{proveedor.nombre}</td>
+                <td>{proveedor.departamento}</td>
+                <td>{proveedor.telefono}</td>
+                <td>{proveedor.correo}</td>
+                <td>
+                  <Link to={`/EditSupplier/${proveedor.idProveedor}`} className="btn btn-outline-primary mx-2">Actualizar</Link>
+                  <button onClick={() => deleteProveedor(proveedor.idProveedor)} className="btn btn-danger mx-2">Eliminar</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+>>>>>>> 2ec48d205edde3988a4a129e7a366e2336db7b94
     )
 }

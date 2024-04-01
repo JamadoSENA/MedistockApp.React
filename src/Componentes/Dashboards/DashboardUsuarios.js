@@ -31,6 +31,7 @@ export const DashboardUsuarios = () => {
     //DELETE USERS
 
     return (
+
         <>
             <div>Dashboard Usuarios</div>
             <Link to="/CreateUser" className='btn btn-primary'>Agregar usuario</Link>
@@ -64,5 +65,42 @@ export const DashboardUsuarios = () => {
                 </table>
             </div>
         </>
+=======
+        <div>
+      <div className="container">
+        <h1 style={{ marginBottom: '20px' }}>Dashboard Usuarios</h1>
+        <div className="d-flex justify-content-between" style={{ marginBottom: '20px' }}>
+          <Link to="/CreateUser" className='btn btn-primary'>Agregar Usuario</Link>
+        </div>
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col">Documento</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Email</th>
+              <th scope="col">Dirección</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {listUsuarios.map((usuario, idUsuario) => (
+              <tr key={idUsuario}>
+                <td>{usuario.documento}</td>
+                <td>{usuario.nombre}</td>
+                <td>{usuario.apellido}</td>
+                <td>{usuario.correo}</td>
+                <td>{usuario.direccion}</td>
+                <td>
+                  <Link to={`/EditUser/${usuario.idUsuario}`} className="btn btn-outline-primary mx-2">Actualizar</Link>
+                  <button onClick={() => deleteUsuario(usuario.idUsuario)} className="btn btn-danger mx-2">Eliminar</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
     )
 }

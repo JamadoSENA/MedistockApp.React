@@ -37,48 +37,45 @@ export const CreateDate = () => {
   return (
    
     <div className="container">
-
-    <div className="row">
-
-      <div className="col-12">
-
-        <div className="formulario-registro">
-
-          <h1>Crear cita</h1>
-          <form onSubmit = {(e) => onSubmit(e)}>
-            <div className="fecha">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {fecha} type={"date"} name="fecha" placeholder="Ingrese la fecha" required />
-            </div>
-            <br />
-            <div className="diagnostico">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {diagnostico} type={"text"} name="diagnostico" placeholder="Ingrese el diagnostico" required />
-            </div>
-            <br />
-            <div className="tratamiento">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {tratamiento} type={"text"} name="tratamiento" placeholder="Ingrese el tratamiento" required />
-            </div>
-            <br />
-            <div className="FkId_Agendamiento">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {FkId_Agendamiento} type={"number"} name="FkId_Agendamiento" placeholder="Ingrese el id del agendamiento" required />
-            </div>
-            <br />
-            <div className="FkId_Medico">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {FkId_Medico} type={"number"} name="FkId_Medico" placeholder="Ingrese el id del medico" required />
-            </div>
-            <br />
-            <div className="form-check mb-3">
-              <button type="submit">Registrar cita</button>
-            </div>
-          </form>
-          <div id="mensajeError" className="mensaje-error"></div>
-
+      <div className="row">
+        <div className="col-12">
+          <div className="formulario-registro">
+            <h2>Crear cita</h2>
+            <form onSubmit={onSubmit}>
+              <div className="form-group">
+                <label>Fecha</label>
+                <input className="form-control" onChange={onInputChange} value={fecha} type="date" name="fecha" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label>Diagnóstico</label>
+                <input className="form-control" onChange={onInputChange} value={diagnostico} type="text" name="diagnostico" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label>Tratamiento</label>
+                <input className="form-control" onChange={onInputChange} value={tratamiento} type="text" name="tratamiento" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label>Id del Agendamiento</label>
+                <input className="form-control" onChange={onInputChange} value={FkId_Agendamiento} type="number" name="FkId_Agendamiento" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label>Id del Médico</label>
+                <input className="form-control" onChange={onInputChange} value={FkId_Medico} type="number" name="FkId_Medico" required />
+              </div>
+              <br />
+              <div className="d-flex justify-content-between">
+                <button type="submit" className="btn btn-primary">Registrar cita</button>
+              </div>
+            </form>
+            <div id="mensajeError" className="mensaje-error"></div>
+          </div>
         </div>
-
       </div>
-
     </div>
-
-  </div>
 
   )
 }

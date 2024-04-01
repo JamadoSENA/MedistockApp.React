@@ -45,9 +45,7 @@ function App() {
           <Route path="/EditSupplier/:id" element = {<EditSupplier />}/>
         </Routes>   
     </div>    
-
     </>
-
   );
 }
 

@@ -52,22 +52,25 @@ export const EditProduct = () => {
 
         <div className="formulario-registro">
 
-          <h1>Editar producto</h1>
-          <form onSubmit = {(e) => onSubmit(e)}>
-            <div className="fechaCaducidad">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {fechaCaducidad} type={"date"} name="fechaCaducidad" placeholder="Ingrese la fecha de caducidad" required />
+          <h2>Editar producto</h2>
+          <form onSubmit={(e) => onSubmit(e)}>
+            <div className="form-group">
+              <label htmlFor="fechaCaducidad">Fecha de Caducidad</label>
+              <input className="form-control" onChange={(e) => onInputChange(e)} value={fechaCaducidad} type={"date"} name="fechaCaducidad" id="fechaCaducidad" placeholder="Ingrese la fecha de caducidad" required />
             </div>
             <br />
-            <div className="cantidad">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {cantidad} type={"number"} name="cantidad" placeholder="Ingrese la cantidad" required />
+            <div className="form-group">
+              <label htmlFor="cantidad">Cantidad</label>
+              <input className="form-control" onChange={(e) => onInputChange(e)} value={cantidad} type={"number"} name="cantidad" id="cantidad" placeholder="Ingrese la cantidad" required />
             </div>
             <br />
-            <div className="estado">
-              <input className="form-control" onChange = {(e) => onInputChange(e)} value = {estado} type={"text"} name="estado" placeholder="Ingrese el estado" required />
+            <div className="form-group">
+              <label htmlFor="estado">Estado</label>
+              <input className="form-control" onChange={(e) => onInputChange(e)} value={estado} type={"text"} name="estado" id="estado" placeholder="Ingrese el estado" required />
             </div>
             <br />
-            <div className="form-check mb-3">
-              <button type="submit">Editar producto</button>
+            <div className="form-group">
+              <button type="submit" className="btn btn-primary">Editar producto</button>
             </div>
           </form>
           <div id="mensajeError" className="mensaje-error"></div>

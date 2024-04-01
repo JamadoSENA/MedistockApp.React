@@ -113,6 +113,75 @@ export const EditUser = () => {
             </div>
           </form>
           <div id="mensajeError" className="mensaje-error"></div>
+=======
+          <h2>Editar usuario</h2>
+          <form onSubmit={(e) => onSubmit(e)}>
+              <div className="form-group">
+                <label htmlFor="documento">Documento</label>
+                <input className="form-control" onChange={(e) => onInputChange(e)} value={documento} type={"number"} name="documento" id="documento" placeholder="Ingrese el número de documento" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label htmlFor="nombre">Nombre</label>
+                <input className="form-control" onChange={(e) => onInputChange(e)} value={nombre} type={"text"} name="nombre" id="nombre" placeholder="Ingrese el nombre" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label htmlFor="apellido">Apellido</label>
+                <input className="form-control" onChange={(e) => onInputChange(e)} value={apellido} type={"text"} name="apellido" id="apellido" placeholder="Ingrese el apellido" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label htmlFor="fechaNacimiento">Fecha de Nacimiento</label>
+                <input className="form-control" onChange={(e) => onInputChange(e)} value={fechaNacimiento} type={"date"} name="fechaNacimiento" id="fechaNacimiento" placeholder="Ingrese la fecha de nacimiento" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label htmlFor="departamento">Departamento</label>
+                <input className="form-control" onChange={(e) => onInputChange(e)} value={departamento} type={"text"} name="departamento" id="departamento" placeholder="Ingrese el departamento" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label htmlFor="municipio">Municipio</label>
+                <input className="form-control" onChange={(e) => onInputChange(e)} value={municipio} type={"text"} name="municipio" id="municipio" placeholder="Ingrese el municipio" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label htmlFor="direccion">Dirección</label>
+                <input className="form-control" onChange={(e) => onInputChange(e)} value={direccion} type={"text"} name="direccion" id="direccion" placeholder="Ingrese la dirección" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label htmlFor="profesion">Profesión</label>
+                <input className="form-control" onChange={(e) => onInputChange(e)} value={profesion} type={"text"} name="profesion" id="profesion" placeholder="Ingrese la profesión" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label htmlFor="telefono">Teléfono</label>
+                <input className="form-control" onChange={(e) => onInputChange(e)} value={telefono} type={"number"} name="telefono" id="telefono" placeholder="Ingrese el número telefónico" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label htmlFor="correo">Correo Electrónico</label>
+                <input className="form-control" onChange={(e) => onInputChange(e)} value={correo} type={"email"} name="correo" id="correo" placeholder="Ingrese el correo electrónico" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label htmlFor="contrasenia">Contraseña</label>
+                <input className="form-control" onChange={(e) => onInputChange(e)} value={contrasenia} type={"password"} name="contrasenia" id="contrasenia" placeholder="Ingrese la contraseña" required />
+              </div>
+              <br />
+              <div className="form-group">
+                <label htmlFor="FkId_Rol">Rol del Usuario</label>
+                <input className="form-control" onChange={(e) => onInputChange(e)} value={FkId_Rol} type={"number"} name="FkId_Rol" id="FkId_Rol" placeholder="Ingrese el rol del usuario" />
+              </div>
+              <br />
+              <div className="form-group">
+                <button type="submit" className="btn btn-primary">Editar usuario</button>
+              </div>
+            </form>
+            <div id="mensajeError" className="mensaje-error"></div>
+
 
         </div>
 
